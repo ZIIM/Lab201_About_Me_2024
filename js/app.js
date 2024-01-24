@@ -4,7 +4,7 @@ let userScore = 0;
 let ready = prompt('Would you like to play a guessing game?');
 
 if (ready === 'y' || ready === 'yes'){
-  alert('Very good, please respond to the questions with either \'y\' or \'n\'.');
+  alert('Very good, please respond to the questions with either \'yes\' or \'no\'.');
 } else {
   alert('UNSATISFACTORY!');
 }
@@ -34,6 +34,7 @@ function askQuestions(index){
 for (let i = 0; i < questions.length; i++){
   askQuestions(i);
 }
+
 alert(`Thank you for playing! Your score is: ${userScore} out of ${questions.length}`);
 
 
