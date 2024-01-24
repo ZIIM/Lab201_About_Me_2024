@@ -1,0 +1,26 @@
+h1, h2, h3, p {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading styles */
+  h1 {
+    font-size: 2em;
+    color: #333; /* Dark grey color */
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    color: #555; /* Slightly darker grey color */
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    color: #777; /* Light grey color */
+  }
+  
+  /* Paragraph styles */
+  p {
+    font-size: 1em;
+    line-height: 1.6; /* Adjust line height for better readability */
+    color: #444; /* Dark grey color */
+  }
