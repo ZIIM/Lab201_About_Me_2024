@@ -19,11 +19,11 @@ const questions = [
 
 const correctAnswers = ['yes','yes','no','yes','no'];
 
-function askQuestions(index){
-  let userAnswer = prompt(questions[index]);
+function askQuestions(i){
+  let userAnswer = prompt(questions[i]);
   userAnswer = userAnswer.toLowerCase();
 
-  if (userAnswer === correctAnswers[index]){
+  if (userAnswer === correctAnswers[i]){
     alert('Correct!');
     userScore++;
   } else {
@@ -37,25 +37,41 @@ for (let i = 0; i < questions.length; i++){
 
 alert(`Thank you for playing! Your score is: ${userScore} out of ${questions.length}`);
 
+// 6th Question second attempt
+let userNumberGuess = prompt('Guess the correct number?');
+let correctNumber = 7;
+
+for (correctNumber = 0; correctNumber < 4; correctNumber++){
+  if (userNumberGuess < correctNumber){
+    alert('too low!');
+  } else if (userNumberGuess > correctNumber){
+    alert('too high');
+  } else {
+    alert('that is correct!');
+  }
+}
 
 
-// let welcome = 'Hello what is your name?';
-// let question1 = 'Is the sky blue?';
-// let question2 = 'Do birds fly?';
-// let question3 = 'Is water dry?';
-// let question4 = 'Can cats walk?';
-// let question5 = 'Can dogs do complex algebra?';
 
-// let welcomemsg = prompt(welcome);
-// alert('Why hello there ' + welcomemsg);
-// let answer1 = prompt(question1);
-// let answer2 = prompt(question2);
-// let answer3 = prompt(question3);
-// let answer4 = prompt(question4);
-// let answer5 = prompt(question5);
-// if (question1 === true){
-//   console.log('correct');
-// }else{
-//   console.log('incorrect');
+// 6th question first attempt
+// let userNumberGuess = prompt('Guess the correct number?');
+// let correctNumber = 7;
+
+// if(userNumberGuess < correctNumber){
+//   alert('too low!');
+// }else if (userNumberGuess > correctNumber){
+//   alert('too high!');
+// } else{
+//   alert('CORRECTO!');
 // }
-// console.log('Js is loaded');
+
+// 7th question
+let multiAnswerResponse = prompt('What is one of my favorite color?');
+let newquestion = ['black', 'red', 'brown', 'green'];
+for (i = 0; i < newquestion.length; i++){
+  if (multiAnswerResponse === newquestion){
+    alert('Correct!');
+  } else {
+    alert('Please try again!');
+  }
+}

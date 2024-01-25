@@ -9,8 +9,9 @@ main{
   margin: 20px;
   }
 
-h1, h2, h3, p {
+h1, h2, h3, p, ul, ol, footer {
     font-family: 'Arial', sans-serif;
+    margin: 20px;
   }
   
   /* Heading styles */
@@ -31,8 +32,6 @@ h1, h2, h3, p {
   
   /* Paragraph styles */
   p {
-    margin: 1px;
-    font-size: 1em;
     line-height: 1.6; /* Adjust line height for better readability */
     color: #444; /* Dark grey color */
   }
