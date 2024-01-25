@@ -41,7 +41,7 @@ alert(`Thank you for playing! Your score is: ${userScore} out of ${questions.len
 let userNumberGuess = prompt('Guess the correct number?');
 let correctNumber = 7;
 
-for (correctNumber = 0; correctNumber < 4; correctNumber++){
+for ( let i = 0; i < 4; i++){
   if (userNumberGuess < correctNumber){
     alert('too low!');
   } else if (userNumberGuess > correctNumber){
@@ -68,8 +68,9 @@ for (correctNumber = 0; correctNumber < 4; correctNumber++){
 // 7th question
 let multiAnswerResponse = prompt('What is one of my favorite color?');
 let newquestion = ['black', 'red', 'brown', 'green'];
-for (i = 0; i < newquestion.length; i++){
-  if (multiAnswerResponse === newquestion){
+
+for (let i = 0; i < newquestion.length; i++){
+  if (multiAnswerResponse === newquestion[i]){
     alert('Correct!');
   } else {
     alert('Please try again!');

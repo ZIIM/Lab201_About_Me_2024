@@ -1,2 +1,2 @@
 All about me
-<!-- <img src=""></img> -->
+<img src=""></img>
