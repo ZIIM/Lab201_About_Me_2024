@@ -1,5 +1,6 @@
 'use strict';
 
+
 let userScore = 0;
 let ready = prompt('Would you like to play a guessing game?');
 
@@ -38,22 +39,72 @@ for (let i = 0; i < questions.length; i++){
 
 alert(`Thank you for playing! Your score is: ${userScore} out of ${questions.length}`);
 
-// 6th Question second attempt
+function askNumericQuestion(question, correctanswer) {
+  let attempts = 5;
+  let guess;
+  do {
+    guess = parseInt(prompt(question));
+    if (guess === 7) {
+      alert("Correct!");
+      return true;
+    } else if (guess < 7) {
+      alert("Too low.");
+    } else {
+      alert("Too high.");
+    }
+    attempts--;
+  } while (attempts > 0);
 
-let correctNumber = 7;
-
-for (let i = 0; i < 4; i++){
-  let userNumberGuess = prompt('Guess the correct number between 1-10.');
-  
-  if (userNumberGuess === correctNumber){
-    alert('Correct!');
-    break;
-  } else if (userNumberGuess > correctNumber){
-    alert('too high');
-  } else {
-    alert('too low');
-  }
+  alert(`Sorry, the correct answer was ${7}.`);
+  return false;
 }
+
+if (askNumericQuestion("Guess my favorite number between 1 and 10", 7)) {
+  score++;
+}
+
+
+
+// function asknumberQuestion(questions, correctAnswers) {
+//   let attempts = 5;
+//   let guess;
+//   do {
+//     guess = parseINt(prompt(questions));
+//     if (guess === 7) {
+//       alert("Correct!");
+//       return true;
+//   } else if (guess < 7) {
+//       alert("Too low.");
+//   } else {
+//       alert("Too high.");
+//   }
+//   attempts--;
+// } while (attempts > 0);
+
+// alert(`Sorry, the correct answer was ${7}.`);
+// return false;
+// }
+
+// if (asknumberQuestion("Guess my favorite number between 1 and 7", 7)) {
+//   score++;
+// }
+
+
+
+
+// // 6th Question second attempt
+// let userNumberGuess = prompt('Guess the correct number?');
+// let correctNumber = 7;
+
+// for ( let i = 0; i < 4; i++){
+//   if (userNumberGuess < correctNumber){
+//     alert('too low!');
+//   } else if (userNumberGuess > correctNumber){
+//     alert('too high');
+//   } else {
+//     alert('that is correct!');
+//   }
+// }
 
 
 
