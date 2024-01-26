@@ -42,23 +42,23 @@ function askNumericQuestion(question, correctanswer) {
   let attempts = 5;
   let guess;
   do {
-      guess = parseInt(prompt(question));
-      if (guess === 21) {
-          alert("Correct!");
-          return true;
-      } else if (guess < 21) {
-          alert("Too low.");
-      } else {
-          alert("Too high.");
-      }
-      attempts--;
+    guess = parseInt(prompt(question));
+    if (guess === 7) {
+      alert("Correct!");
+      return true;
+    } else if (guess < 7) {
+      alert("Too low.");
+    } else {
+      alert("Too high.");
+    }
+    attempts--;
   } while (attempts > 0);
 
-  alert(`Sorry, the correct answer was ${21}.`);
+  alert(`Sorry, the correct answer was ${7}.`);
   return false;
 }
 
-if (askNumericQuestion("Guess my favorite number between 1 and 100", 21)) {
+if (askNumericQuestion("Guess my favorite number between 1 and 10", 7)) {
   score++;
 }
 
