@@ -9,6 +9,7 @@ if (ready === 'y' || ready === 'yes'){
   alert('UNSATISFACTORY!');
 }
 
+// change questions to personal yes or no questions
 const questions = [
   'Is the sky blue?',
   'Do birds fly?',
@@ -38,16 +39,19 @@ for (let i = 0; i < questions.length; i++){
 alert(`Thank you for playing! Your score is: ${userScore} out of ${questions.length}`);
 
 // 6th Question second attempt
-let userNumberGuess = prompt('Guess the correct number?');
+
 let correctNumber = 7;
 
-for ( let i = 0; i < 4; i++){
-  if (userNumberGuess < correctNumber){
-    alert('too low!');
+for (let i = 0; i < 4; i++){
+  let userNumberGuess = prompt('Guess the correct number between 1-10.');
+  
+  if (userNumberGuess === correctNumber){
+    alert('Correct!');
+    break;
   } else if (userNumberGuess > correctNumber){
     alert('too high');
   } else {
-    alert('that is correct!');
+    alert('too low');
   }
 }
 
@@ -67,7 +71,7 @@ for ( let i = 0; i < 4; i++){
 
 // 7th question
 let multiAnswerResponse = prompt('What is one of my favorite color?');
-let newquestion = ['black', 'red', 'brown', 'green'];
+const newquestion = ['black', 'red', 'brown', 'green'];
 
 for (let i = 0; i < newquestion.length; i++){
   if (multiAnswerResponse === newquestion[i]){
